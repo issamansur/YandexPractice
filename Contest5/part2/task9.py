@@ -51,10 +51,12 @@ for row_i in range(N):
         moves_count += abs(indexes_rows_1plus[0] - row_i)
         indexes_rows_1plus.pop(0)
 
+
 # Создаём список столбцов, в которых есть корабли
 columns_with_ships = []
 for i in range(N):
-    columns_with_ships.append(i + 1)
+    for j in range(columns_count[i]):
+        columns_with_ships.append(i + 1)
 
 # Находим медиану столбцов, в которых есть корабли
 # Она показывает, в какой столбец можно выстроить корабли оптимально
